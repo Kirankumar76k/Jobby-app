@@ -1,0 +1,67 @@
+.job-item {
+  padding: 15px;
+  background-color: #272727;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.web-link-item {
+  color: white;
+  text-decoration: none;
+}
+.company-logo {
+  height: 50px;
+}
+.img-title-container {
+  display: flex;
+  align-items: center;
+}
+.title-rating-container {
+  margin-left: 10px;
+}
+.title {
+  font-size: 18px;
+  margin: 0px;
+}
+.rating {
+  font-size: 18px;
+  margin-right: 10px;
+  margin: 0px;
+  margin-top: 6px;
+}
+.star-icon {
+  color: yellow;
+}
+.loc-pack-container {
+  display: flex;
+  justify-content: space-between;
+}
+.loc-emp-continer {
+  display: flex;
+}
+.location {
+  margin-right: 10px;
+  display: flex;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.emp-type {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.icon {
+  margin-right: 10px;
+}
+.package {
+  font-weight: 500;
+  font-size: 20px;
+}
+.desc-head {
+  font-size: 16px;
+}
+.desc-text {
+  font-size: 12px;
+}

@@ -1,0 +1,20 @@
+.range-item {
+  display: flex;
+
+  align-items: center;
+  font-family: roboto;
+}
+.input-radio {
+  font-size: 30px;
+}
+.label {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.input-check {
+  font-size: 10px;
+}
+.range-heading {
+  font-size: 22px;
+  margin-left: 40px;
+}
