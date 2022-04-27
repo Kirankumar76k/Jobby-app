@@ -168,3 +168,36 @@
 .nav-bar-image {
   width: 24px;
 }
+
+.failure-view-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.failure-heading {
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 500;
+  color: #f1f6f8;
+}
+.failure-description {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #c5c9ca;
+}
+.retry-button {
+  height: 30px;
+  border: none;
+  background-color: #4f46e5;
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 8px;
+  width: 90px;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,4 +1,6 @@
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import {BsSearch} from 'react-icons/bs'
 import Cookies from 'js-cookie'
 
@@ -164,13 +166,39 @@ class Jobs extends Component {
           className="search-input"
           placeholder="Search"
           onChange={onChangeSearchInput}
+          testid="searchButton"
         />
         {/* <button className="searchBtn" testid="searchButton" type="button"> */}
-        <BsSearch className="search-icon" testid="searchButton" />
+        <BsSearch className="search-icon" />
         {/* </button> */}
       </div>
     )
   }
+
+  renderLoader = () => (
+    <div className="loader-container" testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
+
+  renderFailureView = () => (
+    <div className="failure-view-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        className="failure-image"
+        alt="failure view"
+      />
+      <h1 className="failure-heading">Oops! Something Went Wrong</h1>
+      <p className="failure-description">
+        We cannot seem to find the page you are looking for.
+      </p>
+      <Link to="/jobs">
+        <button type="button" className="retry-button">
+          Retry
+        </button>
+      </Link>
+    </div>
+  )
 
   renderJobCard = () => {
     const {jobsList} = this.state
@@ -199,25 +227,43 @@ class Jobs extends Component {
     )
   }
 
+  renderApiStatus = () => {
+    const {apiStatus} = this.state
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderSuccessView()
+      case apiStatusConstants.failure:
+        return this.renderFailureView()
+      case apiStatusConstants.inProgress:
+        return this.renderLoader()
+      default:
+        return null
+    }
+  }
+
+  renderSuccessView = () => (
+    <div className="jobs-section">
+      <div className="profile-filter-container">
+        {this.renderProfileContainer()}
+        <FilterGroup
+          employmentTypesList={employmentTypesList}
+          salaryRangesList={salaryRangesList}
+          changeRange={this.changeRange}
+          changeEmpType={this.changeEmpType}
+        />
+      </div>
+      <div className="search-job-list-container">
+        {this.renderSearchInput()}
+        {this.renderJobCard()}
+      </div>
+    </div>
+  )
+
   render() {
     return (
       <>
         <Header />
-        <div className="jobs-section">
-          <div className="profile-filter-container">
-            {this.renderProfileContainer()}
-            <FilterGroup
-              employmentTypesList={employmentTypesList}
-              salaryRangesList={salaryRangesList}
-              changeRange={this.changeRange}
-              changeEmpType={this.changeEmpType}
-            />
-          </div>
-          <div className="search-job-list-container">
-            {this.renderSearchInput()}
-            {this.renderJobCard()}
-          </div>
-        </div>
+        <div>{this.renderApiStatus()}</div>
       </>
     )
   }

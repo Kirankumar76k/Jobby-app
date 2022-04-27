@@ -5,7 +5,7 @@ import {GoLocation} from 'react-icons/go'
 
 import './index.css'
 
-const ProductCard = props => {
+const JobsCard = props => {
   const {jobsData} = props
   const {
     id,
@@ -25,7 +25,7 @@ const ProductCard = props => {
         <div className="img-title-container">
           <img
             src={companyLogoUrl}
-            alt="company-logo"
+            alt="company logo"
             className="company-logo"
           />
           <div className="title-rating-container">
@@ -55,4 +55,4 @@ const ProductCard = props => {
     </li>
   )
 }
-export default ProductCard
+export default JobsCard

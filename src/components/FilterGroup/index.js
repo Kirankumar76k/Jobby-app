@@ -5,7 +5,7 @@ const FilterGroup = props => {
     const {salaryRangesList, changeRange} = props
     return salaryRangesList.map(range => {
       const onClickRangeItem = () => changeRange(range.salaryRangeId)
-
+      const {label} = range
       return (
         <li className="range-item" key={range.salaryRangeId}>
           <input
@@ -16,7 +16,7 @@ const FilterGroup = props => {
             onClick={onClickRangeItem}
           />
           <label htmlFor="rangeId" className="label">
-            {range.label}
+            {label}
           </label>
         </li>
       )
@@ -27,7 +27,7 @@ const FilterGroup = props => {
     const {employmentTypesList, changeEmpType} = props
     return employmentTypesList.map(eachType => {
       const onClickEmpTypeItem = () => changeEmpType(eachType.employmentTypeId)
-
+      const {label} = eachType
       return (
         <li className="range-item" key={eachType.employmentTypeId}>
           <input
@@ -35,9 +35,10 @@ const FilterGroup = props => {
             id="empTypeId"
             className="input-check"
             onClick={onClickEmpTypeItem}
+            value={label}
           />
           <label htmlFor="empTypeId" className="label">
-            {eachType.label}
+            {label}
           </label>
         </li>
       )

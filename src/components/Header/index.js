@@ -7,8 +7,8 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 const Header = props => {
-  const {history} = props
   const onClickLogout = () => {
+    const {history} = props
     Cookies.remove('jwt_token')
     history.replace('/login')
   }
@@ -24,17 +24,23 @@ const Header = props => {
               alt="website logo"
             />
           </Link>
-          <div className="icon-container">
-            <Link to="/">
-              <AiFillHome className="icon-cls" />
-            </Link>
-            <Link to="/jobs">
-              <HiMail className="icon-cls" />
-            </Link>
-            <Link to="/logout">
-              <FiLogOut className="icon-cls" />
-            </Link>
-          </div>
+          <ul className="icon-container">
+            <li>
+              <Link to="/">
+                <AiFillHome className="icon-cls" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/jobs">
+                <HiMail className="icon-cls" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/logout">
+                <FiLogOut className="icon-cls" />
+              </Link>
+            </li>
+          </ul>
         </div>
         <div className="nav-bar-large-container">
           <Link to="/">

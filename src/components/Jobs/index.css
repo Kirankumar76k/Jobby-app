@@ -8,6 +8,11 @@
   color: white;
   min-height: 100vh;
 }
+.all-section {
+  margin: auto;
+  background-color: #000000;
+  width: 90%;
+}
 .profile-container {
   background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
   padding: 10px;
@@ -66,7 +71,7 @@
   border: 1px solid #272727;
   color: white;
   width: 300px;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .search-input {

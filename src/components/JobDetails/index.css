@@ -1,0 +1,143 @@
+.job-details-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #000000;
+  width: 90%;
+  max-width: 1110px;
+  color: white;
+  min-height: 100vh;
+}
+.job-item {
+  padding: 15px;
+  background-color: #272727;
+  margin: 50px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  color: white;
+}
+.web-link-item {
+  color: white;
+  text-decoration: none;
+}
+.company-logo {
+  height: 50px;
+}
+.img-title-container {
+  display: flex;
+  align-items: center;
+}
+.title-rating-container {
+  margin-left: 10px;
+}
+.title {
+  font-size: 18px;
+  margin: 0px;
+}
+.rating {
+  font-size: 18px;
+  margin-right: 10px;
+  margin: 0px;
+  margin-top: 6px;
+}
+.star-icon {
+  color: yellow;
+}
+.loc-pack-container {
+  display: flex;
+  justify-content: space-between;
+}
+.loc-emp-container {
+  display: flex;
+}
+.location {
+  margin-right: 10px;
+  display: flex;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.emp-type {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.icon {
+  margin-right: 10px;
+}
+.package {
+  font-weight: 500;
+  font-size: 20px;
+}
+.desc-head {
+  font-size: 16px;
+}
+.desc-text {
+  font-size: 12px;
+}
+.skill-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0px;
+}
+.skill-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+.skill-image {
+  height: 35px;
+  width: 35px;
+}
+.skill-name {
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.life-container {
+  display: flex;
+  justify-content: space-between;
+}
+.life-desc-container {
+  display: flex;
+  flex-direction: column;
+}
+.life-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+.sim-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sim-item {
+  padding: 15px;
+  background-color: #272727;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  max-width: 250px;
+  cursor: pointer;
+  color: white;
+}
+.sim-head {
+  font-size: 20px;
+  margin-left: 40px;
+}
+.link-container {
+  display: flex;
+  justify-content: space-between;
+}
+.visit-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #6366f1;
+}
